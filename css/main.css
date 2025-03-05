@@ -114,7 +114,7 @@ nav {
 }
 
 .pic {
-    background-image: url("/Bootstrap/medi/photos/bgim.jpg");
+    background-image: url("../photos/bgim.jpg");
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -448,33 +448,43 @@ header .inner .na .con a {
     display: grid;
     grid-template-columns: repeat(4, 23%);
     justify-content: space-evenly;
+
+}
+#sec7 .con2 .pics
+{
+    width: 100%;
     position: relative;
+    height: 100%;
 }
 
-#sec7 .con2 .blocks {
-    width: 23%;
+#sec7 .con2 .pics .blocks {
+    width: 100%;
     height: 100%;
     text-align: center;
-    background-color: var(--blu);
+    
     position: absolute;
     top: 0;
-    opacity: 0;
+    /* opacity: 0; */
+    transition: background 1s;
+    /* place-items: center; */
 }
 
 #sec7 .con2 .blocks button {
     padding: 10px 30px;
     background-color: white;
     color: var(--blu);
-    opacity: 1;
+    opacity: 0;
     font-weight: bold;
     margin-top: 120px;
     border: none;
     border-radius: 5px;
 }
-
-#sec7 .con2 .blocks:hover {
-    opacity: .6;
-    transition: 1s;
+#sec7 .con2 .pics:hover .blocks button {
+    opacity: 1;
+}
+#sec7 .con2 .pics:hover .blocks {
+    transition-duration: 2s;
+    background: linear-gradient(rgba(26, 118, 209, .8)0%,rgba(26, 118, 209, .8)100%);
 }
 
 #sec8 .inner .con2 {
@@ -720,6 +730,24 @@ header .inner .na .con a {
     padding: 100px 0;
 }
 
+#sec13 .con2 .cont 
+{
+    position: relative;
+    overflow: hidden;
+} 
+#sec13 .con2 .cont .lines
+{
+    position: absolute;
+    border-bottom: 1px solid var(--blu);
+    bottom: 0;
+  width: 100%;
+  left: -500px;
+}
+#sec13 .con2 .cont:hover .lines 
+{
+    left: 0;
+    transition-duration: 1s;
+}
 #sec13 .inner .con2 .con {
     padding: 20px;
 }
@@ -740,11 +768,6 @@ header .inner .na .con a {
 {
     display: grid;
     row-gap: 8px;
-}
-#sec13 .inner .con2 .cont:hover
-{
-    border-bottom: .1px solid var(--blu);
-    transition-duration: 1s;
 }
 #sec14 .inner {
     display: grid;
@@ -998,20 +1021,13 @@ footer ul li
     {
         padding: 10px 15px;
     }
-    #sec7 .con2 .blocks button
-    {
-        margin-top: 180px;
-    }
+ 
 
     #sec7 .con2 
     {
         grid-template-columns: repeat(2,48%);
     }
-    #sec7 .con2 .blocks
-    {
-        width: 48%;
-        height: 49.5%;
-    }
+   
     /* footer .inner .part .con i {
         margin-right: 8px;
     } */
@@ -1195,14 +1211,7 @@ footer .ico{
         grid-template-columns: 80%;
         justify-content: center;
     }
-    #sec7 .con2 .blocks
-    {
-        width: 100%;
-        height: 100%;
-    }
-    #sec7 .con2 .blocks button {
-        margin-top: 150px;
-    }
+
     #sec9 .rel {
         top: 130px;
     }
